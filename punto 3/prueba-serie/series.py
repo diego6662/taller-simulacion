@@ -50,10 +50,17 @@ def main():
         int_sup += incr
     table_chi = ((FE - fo) ** 2) / FE
     chi_cal = np.sum(table_chi)
-    print("frecuencia obtenida:\n",fo)
-    print("(fe-fo)²/fe\n",table_chi)
+    print("frecuencia obtenida:\n") 
+    print("0.0-0.1 | 0.1-0.2 | 0.2-0.3 | 0.3-0.4 | 0.4-0.5 | 0.5-0.6 | 0.6-0.7 | 0.7-0.8 | 0.8-0.9 | 0.9-1.0 ")
+    for i in range(10):
+        print(f'    {fo[i,0]} | {fo[i,1]}     |   {fo[i,2]}   |   {fo[i,3]}   |   {fo[i,4]}   |   {fo[i,5]}   |   {fo[i,6]}   |   {fo[i,7]}   |   {fo[i,8]}   |   {fo[i,9]}  ')
+    print("(fe-fo)²/fe\n")
+    print("0.0-0.1 | 0.1-0.2 | 0.2-0.3 | 0.3-0.4 | 0.4-0.5 | 0.5-0.6 | 0.6-0.7 | 0.7-0.8 | 0.8-0.9 | 0.9-1.0 ")
+    for i in range(10):
+        print(f'    {table_chi[i,0]} | {table_chi[i,1]} |   {table_chi[i,2]}   |   {table_chi[i,3]}   |   {table_chi[i,4]}   |   {table_chi[i,5]}   |   {table_chi[i,6]}   |   {table_chi[i,7]}   |   {table_chi[i,8]}   |   {table_chi[i,9]}  ')
+    
     print("chi calculado:",chi_cal)
-    chi_cri = 36.42
+    chi_cri = 124.3421
     
     if chi_cal <= chi_cri:
         print("cumple la prueba de independencia")
