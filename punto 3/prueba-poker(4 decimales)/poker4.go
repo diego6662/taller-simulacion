@@ -38,8 +38,8 @@ func main() {
 		temp := fmt.Sprintf("%0.4f", i)
 		temp = temp[2:]
 
-		for j := 0; j < 5; j++ {
-			key := string(temp[j]) //12341
+		for j := 0; j < 4; j++ {
+			key := string(temp[j]) //1234
 			hash[key]++
 		}
 		size := len(hash)
