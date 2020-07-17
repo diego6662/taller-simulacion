@@ -1,5 +1,6 @@
 hola profe ya se corrigio el error en poker de 4 decimales fue que tenia mal una condicion en un for y examinaba una pocision mas en el array
 pero ya cambiando de tema en caso de que se le presente un error a la hora de leer el .txt es un error de
 ubicacion entonces solo copie la ruta del archivo Number.txt de la carpeta punto 1 y reemplace todas las lineas donde salga ../../punto 1/Number.txt
-por la nueva direccion.
+por la nueva direccion en caso de que lo vaya ejecutar en windows al copiar la ruta absoluta debera hacer un pequeño cambio
+ejemplo la ruta absoluta es "c:user\desktop\Number.txt" debera cambiarla a "/user/desktop/Number.txt".
 Probablemente a la hora de ejecutar algun generador le saldra una advertencia diciendo que el main ya ha sido generado pero haga caso omiso a esa advertencia ya que solo es para indicar que ya hay mas de un archivo que tiene main en esa carpeta
