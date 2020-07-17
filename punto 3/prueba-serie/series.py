@@ -83,7 +83,7 @@ def main():
         print("cumple la prueba de independencia")
     else:
         print("no cumple la prueba de independencia")
-
+    file.close()
 
 
 if  __name__ == "__main__":
