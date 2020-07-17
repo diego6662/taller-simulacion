@@ -52,27 +52,21 @@ def main():
     chi_cal = np.sum(table_chi)
     file = open("Table.txt","w+")
     file.write("frecuencia obtenida:\n") 
-    file.write("           |0.0-0.1 | 0.1-0.2 | 0.2-0.3 | 0.3-0.4 | 0.4-0.5 | 0.5-0.6 | 0.6-0.7 | 0.7-0.8 | 0.8-0.9 | 0.9-1.0|\n")
-    int_inf = 0.0
-    int_sup = 1/inc
-    incr = 1 / inc
-   
+    file.write("         |0.0-0.1 | 0.1-0.2 | 0.2-0.3 | 0.3-0.4 | 0.4-0.5 | 0.5-0.6 | 0.6-0.7 | 0.7-0.8 | 0.8-0.9 | 0.9-1.0|\n")
+    intervalos = ["0.0-0.1" , "0.1-0.2", "0.2-0.3" , "0.3-0.4" , "0.4-0.5" , "0.5-0.6" , "0.6-0.7","0.7-0.8" ,"0.8-0.9" ,"0.9-1.0"]
+    
     for i in range(10):
         
-        text_temp = f"{str(int_inf)[:3]} - {str(int_sup)[:3]}  |   {int(fo[i,0])}  |   {int(fo[i,1])}   |   {int(fo[i,2])}   |   {int(fo[i,3])}   |   {int(fo[i,4])}   |   {int(fo[i,5])}   |   {int(fo[i,6])}   |   {int(fo[i,7])}   |   {int(fo[i,8])}   |   {int(fo[i,9])}  |"
+        text_temp = f"{intervalos[i]}  |   {int(fo[i,0])}  |   {int(fo[i,1])}   |   {int(fo[i,2])}   |   {int(fo[i,3])}   |   {int(fo[i,4])}   |   {int(fo[i,5])}   |   {int(fo[i,6])}   |   {int(fo[i,7])}   |   {int(fo[i,8])}   |   {int(fo[i,9])}  |"
         file.write(text_temp + "\n")
-        int_inf = int_sup
-        int_sup += incr
+        
         
     file.write("(fe-fo)²/fe:\n")
-    file.write("           |  0.0-0.1 |   0.1-0.2 |   0.2-0.3 |   0.3-0.4 |   0.4-0.5 |   0.5-0.6 |   0.6-0.7 |   0.7-0.8 |   0.8-0.9 |   0.9-1.0|\n")
-    int_inf = 0.0
-    int_sup = 1/inc
-    incr = 1 / inc
-   
+    file.write("         |  0.0-0.1 |   0.1-0.2 |   0.2-0.3 |   0.3-0.4 |   0.4-0.5 |   0.5-0.6 |   0.6-0.7 |   0.7-0.8 |   0.8-0.9 |   0.9-1.0|\n")
+    
     for i in range(10):
         
-        text_temp = f"{str(int_inf)[:3]} - {str(int_sup)[:3]}  |   {int(table_chi[i,0])}  |   {int(table_chi[i,1])}   |   {int(table_chi[i,2])}   |   {int(table_chi[i,3])}   |   {int(table_chi[i,4])}   |   {int(table_chi[i,5])}   |   {int(table_chi[i,6])}   |   {int(table_chi[i,7])}   |   {int(table_chi[i,8])}   |   {int(table_chi[i,9])}  |"
+        text_temp = f"{intervalos[i]}  |   {int(table_chi[i,0])}  |   {int(table_chi[i,1])}   |   {int(table_chi[i,2])}   |   {int(table_chi[i,3])}   |   {int(table_chi[i,4])}   |   {int(table_chi[i,5])}   |   {int(table_chi[i,6])}   |   {int(table_chi[i,7])}   |   {int(table_chi[i,8])}   |   {int(table_chi[i,9])}  |"
         file.write(text_temp + "\n")
         int_inf = int_sup
         int_sup += incr
