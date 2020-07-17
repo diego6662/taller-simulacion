@@ -11,7 +11,7 @@ def main():
     
     class_number = 10.0 ## numero de clases
     
-    FE = len(nums) / class_number
+    FE = len(nums) / class_number ** 2
     inc = 10.0
     """
     incremento es el valor de como se debe dividir el intervalo
