@@ -12,6 +12,7 @@ def main():
     class_number = 10.0 ## numero de clases
     
     FE = len(nums) / class_number ** 2
+    print(len(nums),FE)
     inc = 10.0
     """
     incremento es el valor de como se debe dividir el intervalo
@@ -28,6 +29,7 @@ def main():
     row = 0
     for i in range(int(group_number)):
         pairs.append((nums[i],nums[i + 1]))
+   
     while int_sup <= 1:
         col = 0
         row_inf = 0
@@ -66,7 +68,7 @@ def main():
     
     for i in range(10):
         
-        text_temp = f"{intervalos[i]}  |   {int(table_chi[i,0])}  |   {int(table_chi[i,1])}   |   {int(table_chi[i,2])}   |   {int(table_chi[i,3])}   |   {int(table_chi[i,4])}   |   {int(table_chi[i,5])}   |   {int(table_chi[i,6])}   |   {int(table_chi[i,7])}   |   {int(table_chi[i,8])}   |   {int(table_chi[i,9])}  |"
+        text_temp = f"{intervalos[i]}  |   {table_chi[i,0]}  |   {table_chi[i,1]}   |   {table_chi[i,2]}   |   {table_chi[i,3]}   |   {table_chi[i,4]}   |   {table_chi[i,5]}   |   {table_chi[i,6]}   |   {table_chi[i,7]}   |   {table_chi[i,8]}   |   {table_chi[i,9]}  |"
         file.write(text_temp + "\n")
         int_inf = int_sup
         int_sup += incr

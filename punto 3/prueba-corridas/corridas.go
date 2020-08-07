@@ -34,26 +34,28 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	for i := 1; i < len(nums); i++ {
-		if i == 1 {
+	for i := 0; i < len(nums); i++ {
+		if i == 0 {
+
+			tabla.WriteString("*")
+
+			value = nums[i+1]
 			if nums[i] > value {
-				up = false
-				np++
+
+				up = true
 
 			} else {
-				up = true
-				nd++
+				up = false
 
 			}
-			tabla.WriteString("* ")
-
 			value = nums[i]
 			continue
 		}
+
 		if nums[i] > value {
-			np++
 
 			if !up {
+				np++
 				up = true
 				numCorr++
 				tabla.WriteString(" || ")
@@ -61,9 +63,9 @@ func main() {
 			tabla.WriteString(" + ")
 
 		} else {
-			nd++
 
 			if up {
+				nd++
 				up = false
 				numCorr++
 				tabla.WriteString(" || ")
